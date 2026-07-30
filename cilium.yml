@@ -1,0 +1,78 @@
+ipam:
+  mode: kubernetes
+devices: ens18
+routingMode: native
+autoDirectNodeRoutes: true
+directRoutingDevice: ens18
+ipv4NativeRoutingCIDR: 10.244.0.0/16
+kubeProxyReplacement: true
+securityContext:
+  capabilities:
+    ciliumAgent:
+      - CHOWN
+      - KILL
+      - NET_ADMIN
+      - NET_RAW
+      - IPC_LOCK
+      - SYS_ADMIN
+      - SYS_RESOURCE
+      - DAC_OVERRIDE
+      - FOWNER
+      - SETGID
+      - SETUID
+    cleanCiliumState:
+      - NET_ADMIN
+      - SYS_ADMIN
+      - SYS_RESOURCE
+cgroup:
+  autoMount:
+    enabled: false
+  hostRoot: /sys/fs/cgroup
+k8sServiceHost: localhost
+k8sServicePort: 7445
+l2announcements:
+  enabled: true
+externalIPs:
+  enabled: true
+extraConfig:
+  direct-routing-device: ens18
+
+# Gateway API
+gatewayAPI:
+  enabled: true
+  secretsNamespace:
+    create: false
+    name: kube-system
+
+envoyConfig:
+  secretsNamespace:
+    create: false
+    name: kube-system
+
+ingressController:
+  secretsNamespace:
+    create: false
+    name: kube-system
+
+tls:
+  secretsNamespace:
+    create: false
+    name: kube-system
+
+ipv4:
+  enabled: true
+ipv6:
+  enabled: false
+
+hubble:
+  relay:
+    enabled: true
+  ui:
+    enabled: true
+
+# Service Mesh
+l7Proxy: true
+proxy:
+  enabled: true
+envoy:
+  enabled: true

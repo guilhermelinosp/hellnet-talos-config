@@ -1,0 +1,9 @@
+# Secrets - NEVER commit (cluster CA/crt/key)
+talosconfig
+config
+etcd-admin/
+etcd-certs/
+*.obsolete
+# transient
+*.tgz
+.DS_Store

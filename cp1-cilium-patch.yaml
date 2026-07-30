@@ -1,0 +1,13 @@
+machine:
+  network:
+    hostname: cp1
+    nameservers:
+      - 192.168.1.1
+    interfaces:
+      - interface: ens18
+        dhcp: false
+        addresses:
+          - 192.168.1.201/24
+        routes:
+          - network: 0.0.0.0/0
+            gateway: 192.168.1.1
