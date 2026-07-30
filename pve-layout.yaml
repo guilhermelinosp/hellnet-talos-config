@@ -15,7 +15,7 @@ vms:
     ip: 192.168.1.201
     ip_static: true
     disk:
-      efidisk0: local:201/vm-201-disk-0.raw,efitype=2m,size=528K
+      efidisk0: local-zfs:vm-201-disk-9,efitype=2m,size=528K
       scsi0: local-zfs:vm-201-disk-0,cache=writethrough,discard=on,size=60G,ssd=1
     boot: order=scsi0
     schematic: factory.talos.dev/installer/dc7b152cb3ea99b821fcb7340ce7168313ce393d663740b791c36f6e95fc8586:v1.13.6
@@ -31,7 +31,7 @@ vms:
     ip: 192.168.1.202
     ip_static: true
     disk:
-      efidisk0: local:202/vm-202-disk-0.raw,efitype=2m,size=528K
+      efidisk0: local-zfs:vm-202-disk-9,efitype=2m,size=528K
       scsi0: local-zfs:vm-202-disk-0,cache=writethrough,discard=on,size=60G,ssd=1
     boot: order=scsi0
     schematic: factory.talos.dev/installer/dc7b152cb3ea99b821fcb7340ce7168313ce393d663740b791c36f6e95fc8586:v1.13.6
@@ -47,7 +47,7 @@ vms:
     ip: 192.168.1.203
     ip_static: true
     disk:
-      efidisk0: local:203/vm-203-disk-0.raw,efitype=2m,size=528K
+      efidisk0: local-zfs:vm-203-disk-9,efitype=2m,size=528K
       scsi0: local-zfs:vm-203-disk-0,cache=writethrough,discard=on,size=60G,ssd=1
     boot: order=scsi0
     schematic: factory.talos.dev/installer/dc7b152cb3ea99b821fcb7340ce7168313ce393d663740b791c36f6e95fc8586:v1.13.6
@@ -63,7 +63,7 @@ vms:
     ip: 192.168.1.211
     ip_static: true
     disk:
-      efidisk0: local:211/vm-211-disk-0.raw,efitype=2m,size=528K
+      efidisk0: local-zfs:vm-211-disk-9,efitype=2m,size=528K
       scsi0: local-zfs:vm-211-disk-3,cache=writethrough,discard=on,size=100G,ssd=1
     boot: order=scsi0
     schematic: factory.talos.dev/installer/dc7b152cb3ea99b821fcb7340ce7168313ce393d663740b791c36f6e95fc8586:v1.13.6
@@ -79,7 +79,7 @@ vms:
     ip: 192.168.1.212
     ip_static: true
     disk:
-      efidisk0: local:212/vm-212-disk-0.raw,efitype=2m,size=528K
+      efidisk0: local-zfs:vm-212-disk-9,efitype=2m,size=528K
       scsi0: local-zfs:vm-212-disk-0,cache=writethrough,discard=on,size=100G,ssd=1
     boot: order=scsi0
     schematic: factory.talos.dev/installer/dc7b152cb3ea99b821fcb7340ce7168313ce393d663740b791c36f6e95fc8586:v1.13.6
@@ -95,7 +95,7 @@ vms:
     ip: 192.168.1.213
     ip_static: true
     disk:
-      efidisk0: local:213/vm-213-disk-0.raw,efitype=2m,size=528K
+      efidisk0: local-zfs:vm-213-disk-9,efitype=2m,size=528K
       scsi0: local-zfs:vm-213-disk-0,cache=writethrough,discard=on,size=100G,ssd=1
     boot: order=scsi0
     schematic: factory.talos.dev/installer/dc7b152cb3ea99b821fcb7340ce7168313ce393d663740b791c36f6e95fc8586:v1.13.6
