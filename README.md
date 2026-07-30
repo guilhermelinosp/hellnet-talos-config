@@ -29,4 +29,3 @@ Ver `RECOVERY.md` → seção "Rebuild total a partir do .talos".
 
 ## Notas
 - Este repo é **público e sem segredos**. O `talosconfig` deve ser restaurado de backup local.
-- Geração antiga (`*-merged.yaml`, `*.obsolete`) é lixo — ignorar.

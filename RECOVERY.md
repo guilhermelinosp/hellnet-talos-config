@@ -31,15 +31,12 @@ Arquivos essenciais em /root/.talos:
 - `cilium.yml` + `*-cilium-patch.yaml` — CNI
 - `bootstrap.sh` — runbook original
 - `RECOVERY.md` — este arquivo
-- IGNORAR: `*.obsolete`, `*-merged.yaml` (geração antiga, CA diferente)
+- IGNORAR: nenhum arquivo obsoleto deve existir em /root/.talos (merged/obsolete foram removidos)
 - `/root/.talos/cp1-install.yaml` + `cp1-install-vip.yaml` (com VIP .100) → cp1
-- `/root/.talos/cp2-install.yaml` + `cp3-install.yaml` → novos CPs (tipo controlplane, VIP .100)
+- `/root/.talos/cp2-install.yaml` + `cp3-install.yaml` → novos CPs (controlplane, VIP .100)
 - `/root/.talos/wk1/2/3-install.yaml` → workers
-- `/root/.talos/talosconfig` → credenciais (endpoints=192.168.1.100)
-- `/root/.talos/cp1-merged.yaml` + `wk*-merged.yaml` → install + cilium-patch (CA correto)
-- `*merged.yaml.obsolete` → LIxo de gen anterior. NÃO USAR.
 
-Se tudo cair, USE OS `*-install.yaml` + `talosconfig`. Os `*-merged.yaml` servem só pra reference.
+Se tudo cair, USE OS `*-install.yaml` + `talosconfig`. Estes são a fonte de verdade.
 
 ## BACKUPS (já existem em /root/backups/)
 - `/root/backups/etcd/<TS>/snapshot.db`   → snapshot do etcd (estado do k8s). Regenere após cada mudança importante.
