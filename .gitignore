@@ -7,3 +7,5 @@ etcd-certs/
 # transient
 *.tgz
 .DS_Store
+talosconfig.backup.*
+config.backup.*
