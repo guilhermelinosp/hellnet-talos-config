@@ -19,7 +19,6 @@ talosctl --endpoints 192.168.1.201 --nodes 192.168.1.201 \
 
 SIZE=$(ls -lh "$BACKUP_DIR/$FILE" | awk '{print $5}')
 echo "Snapshot: $SIZE"
-echo "Info: $(talosctl etcd snapshot info "$BACKUP_DIR/$FILE" 2>&1 | head -1)"
 
 # Limpar backups antigos
 cd "$BACKUP_DIR"
